@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TIN HỌC 12 - MẠNG MÁY TÍNH
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue?logo=github)](https://github.com/pages)
@@ -269,3 +270,6 @@ Kiro AI - Educational Platform Development
 ---
 
 **Học tốt và đạt điểm cao! 🎉**
+=======
+# tinhoc12
+>>>>>>> 14b1da5c3b2b5a18409e3b091596858a26bf58b6
