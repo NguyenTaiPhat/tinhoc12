@@ -1,0 +1,121 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║           TIN HỌC 12 - MẠNG MÁY TÍNH                        ║
+║           Hướng dẫn bắt đầu                                 ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+📚 CÁC FILE QUAN TRỌNG:
+─────────────────────────────────────────────────────────────
+
+✅ Website files:
+   • index.html - Trang chính (mở file này để xem website)
+   • style.css - Giao diện
+   • script.js - Chức năng
+
+✅ Hướng dẫn:
+   • BAT-DAU.txt - File này (đọc đầu tiên)
+   • HUONG-DAN-NHANH.md - Deploy trong 5 phút
+   • DEPLOY.md - Hướng dẫn chi tiết
+   • CHECKLIST.md - Kiểm tra trước khi deploy
+
+✅ Scripts:
+   • START.bat - Chạy website trên máy (double click)
+   • deploy.bat - Deploy lên GitHub tự động (sau khi setup)
+
+
+🚀 BƯỚC 1: XEM WEBSITE TRÊN MÁY
+─────────────────────────────────────────────────────────────
+
+Cách 1: Double click vào START.bat
+Cách 2: Double click vào index.html
+Cách 3: Chuột phải index.html → Open with → Chrome/Firefox
+
+
+🌐 BƯỚC 2: DEPLOY LÊN GITHUB (MIỄN PHÍ)
+─────────────────────────────────────────────────────────────
+
+Đọc file: HUONG-DAN-NHANH.md
+
+TÓM TẮT:
+1. Cài Git: https://git-scm.com
+2. Tạo repository trên GitHub
+3. Chạy các lệnh trong CMD:
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin https://github.com/USERNAME/REPO.git
+   git push -u origin main
+4. Settings → Pages → Kích hoạt
+5. Xem website tại: https://USERNAME.github.io/REPO/
+
+
+💾 SAO LƯU DỮ LIỆU
+─────────────────────────────────────────────────────────────
+
+Website có nút BACKUP/RESTORE ở cuối sidebar bên trái:
+• Nút Download (mũi tên xuống) - Sao lưu dữ liệu
+• Nút Upload (mũi tên lên) - Khôi phục dữ liệu
+
+LƯU Ý: Sao lưu thường xuyên để tránh mất dữ liệu!
+
+
+📖 NỘI DUNG HỌC TẬP
+─────────────────────────────────────────────────────────────
+
+✓ 8 chương lý thuyết với sơ đồ tương tác
+✓ 30 flashcards với hiệu ứng 3D flip
+✓ 50 câu hỏi trắc nghiệm
+✓ Theo dõi tiến độ học tập
+✓ Light/Dark mode
+✓ Mobile friendly
+
+
+⚙️ TÍNH NĂNG
+─────────────────────────────────────────────────────────────
+
+✓ Lưu dữ liệu tự động (LocalStorage)
+✓ Backup/Restore dữ liệu (.json)
+✓ Hoạt động offline 100%
+✓ Responsive (Desktop, Tablet, Mobile)
+✓ Theme sáng/tối
+✓ Không cần Internet sau khi tải về
+
+
+🆘 CẦN TRỢ GIÚP?
+─────────────────────────────────────────────────────────────
+
+1. Đọc README.md - Hướng dẫn đầy đủ
+2. Đọc DEPLOY.md - Xử lý lỗi deploy
+3. Đọc CHECKLIST.md - Kiểm tra từng bước
+4. YouTube: "github pages tutorial"
+
+
+📞 LIÊN HỆ
+─────────────────────────────────────────────────────────────
+
+GitHub: Tạo Issue trên repository
+Email: (thêm email của bạn)
+
+
+🎯 KHUYẾN NGHỊ
+─────────────────────────────────────────────────────────────
+
+☑ Test website trên máy trước (click START.bat)
+☑ Đọc CHECKLIST.md để đảm bảo mọi thứ OK
+☑ Follow HUONG-DAN-NHANH.md để deploy nhanh
+☑ Backup dữ liệu thường xuyên
+☑ Share link với bạn bè sau khi deploy
+
+
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║              🎉 CHÚC BẠN HỌC TỐT VÀ ĐẠT ĐIỂM CAO! 🎉       ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+Bắt đầu từ đây:
+→ Click đúp START.bat để xem website
+→ Đọc HUONG-DAN-NHANH.md để deploy lên GitHub

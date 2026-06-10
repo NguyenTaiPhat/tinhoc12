@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nền tảng học Mạng Máy Tính Lớp 12 - Học nhanh, nhớ lâu, ôn thi hiệu quả">
+    <meta name="keywords" content="tin học 12, mạng máy tính, học online, ôn thi, TCP/IP, DNS, HTTP">
+    <meta property="og:title" content="TIN HỌC 12 - MẠNG MÁY TÍNH">
+    <meta property="og:description" content="Học nhanh. Nhớ lâu. Ôn thi hiệu quả.">
+    <meta property="og:type" content="website">
+    <title>TIN HỌC 12 - MẠNG MÁY TÍNH</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563EB' stroke-width='2'%3E%3Crect x='2' y='3' width='20' height='14' rx='2'/%3E%3Cpath d='M8 21h8M12 17v4'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <path d="M8 21h8M12 17v4" />
+                </svg>
+                <div class="logo-text">
+                    <h1>TIN HỌC 12</h1>
+                    <p>Mạng Máy Tính</p>
+                </div>
+            </div>
+            <button class="close-sidebar" id="closeSidebar" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="nav-item active" data-section="dashboard">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                    <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+                <span>Trang chủ</span>
+            </a>
+            <a href="#" class="nav-item" data-section="theory">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                </svg>
+                <span>Lý thuyết</span>
+            </a>
+            <a href="#" class="nav-item" data-section="flashcards">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                    <line x1="9" y1="9" x2="15" y2="9" />
+                    <line x1="9" y1="15" x2="15" y2="15" />
+                </svg>
+                <span>Flashcards</span>
+            </a>
+            <a href="#" class="nav-item" data-section="quiz">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+                <span>Kiểm tra</span>
+            </a>
+            <a href="#" class="nav-item" data-section="progress">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="20" x2="18" y2="10" />
+                    <line x1="12" y1="20" x2="12" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+                <span>Tiến độ</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="data-btn" id="dataBackup" aria-label="Backup data" title="Sao lưu dữ liệu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+            </button>
+            <button class="data-btn" id="dataRestore" aria-label="Restore data" title="Khôi phục dữ liệu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="17 8 12 3 7 8" />
+                    <line x1="12" y1="3" x2="12" y2="15" />
+                </svg>
+            </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Chế độ sáng/tối">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
+        </div>
+        <input type="file" id="fileInput" accept=".json" style="display: none;" />
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Mobile Header -->
+        <header class="mobile-header">
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <line x1="3" y1="18" x2="21" y2="18" />
+                </svg>
+            </button>
+            <div class="mobile-logo">
+                <span>TIN HỌC 12</span>
+            </div>
+            <button class="mobile-theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section class="section active" id="dashboard">
+            <div class="hero">
+                <div class="hero-content">
+                    <h2 class="hero-title">
+                        <span class="title-primary">TIN HỌC 12</span>
+                        <span class="title-secondary">MẠNG MÁY TÍNH</span>
+                    </h2>
+                    <p class="hero-subtitle">Học nhanh. Nhớ lâu. Ôn thi hiệu quả.</p>
+                    <button class="btn-primary" id="startLearning">Bắt đầu học</button>
+                </div>
+                <div class="hero-illustration">
+                    <svg viewBox="0 0 400 300" fill="none">
+                        <circle cx="200" cy="150" r="80" fill="#2563EB" opacity="0.1" />
+                        <rect x="160" y="110" width="80" height="60" rx="4" fill="#2563EB" />
+                        <rect x="170" y="120" width="60" height="35" fill="#38BDF8" />
+                        <line x1="200" y1="170" x2="200" y2="200" stroke="#2563EB" stroke-width="3" />
+                        <line x1="200" y1="200" x2="120" y2="250" stroke="#2563EB" stroke-width="3" />
+                        <line x1="200" y1="200" x2="280" y2="250" stroke="#2563EB" stroke-width="3" />
+                        <circle cx="120" cy="250" r="15" fill="#22C55E" />
+                        <circle cx="200" cy="250" r="15" fill="#22C55E" />
+                        <circle cx="280" cy="250" r="15" fill="#22C55E" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                    </svg>
+                    <div class="stat-info">
+                        <h3 class="stat-number">8</h3>
+                        <p class="stat-label">Chương học</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                        <line x1="9" y1="9" x2="15" y2="9" />
+                        <line x1="9" y1="15" x2="15" y2="15" />
+                    </svg>
+                    <div class="stat-info">
+                        <h3 class="stat-number">30</h3>
+                        <p class="stat-label">Flashcards</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                    <div class="stat-info">
+                        <h3 class="stat-number">50</h3>
+                        <p class="stat-label">Câu hỏi</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="section-title">Nội dung học tập</h3>
+            <div class="modules-grid">
+                <div class="module-card" data-chapter="0">
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h4 class="module-title">Mạng máy tính</h4>
+                    <p class="module-desc">LAN, WAN, WLAN, Internet</p>
+                    <div class="module-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="module-card" data-chapter="1">
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                    </div>
+                    <h4 class="module-title">Thiết bị mạng</h4>
+                    <p class="module-desc">Hub, Switch, Router, Modem</p>
+                    <div class="module-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="module-card" data-chapter="2">
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                        </svg>
+                    </div>
+                    <h4 class="module-title">TCP/IP</h4>
+                    <p class="module-desc">Giao thức truyền dữ liệu</p>
+                    <div class="module-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="module-card" data-chapter="3">
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+                            <line x1="12" y1="18" x2="12.01" y2="18" />
+                        </svg>
+                    </div>
+                    <h4 class="module-title">Địa chỉ IP</h4>
+                    <p class="module-desc">IPv4, IPv6</p>
+                    <div class="module-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="module-card" data-chapter="4">
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
+                            <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
+                            <circle cx="12" cy="12" r="2" />
+                            <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" />
+                            <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" />
+                        </svg>
+                    </div>
+                    <h4 class="module-title">DNS</h4>
+                    <p class="module-desc">Hệ thống phân giải tên miền</p>
+                    <div class="module-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="module-card" data-chapter="5">
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </div>
+                    <h4 class="module-title">Email</h4>
+                    <p class="module-desc">SMTP, POP3, IMAP</p>
+                    <div class="module-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="module-card" data-chapter="6">
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                    </div>
+                    <h4 class="module-title">HTTP & HTTPS</h4>
+                    <p class="module-desc">Giao thức Web</p>
+                    <div class="module-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="module-card" data-chapter="7">
+                    <div class="module-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="16" x2="12" y2="12" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                        </svg>
+                    </div>
+                    <h4 class="module-title">Ethernet</h4>
+                    <p class="module-desc">MAC, ARP, ICMP</p>
+                    <div class="module-progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Theory Section -->
+        <section class="section" id="theory">
+            <h2 class="page-title">Lý thuyết</h2>
+            <p class="page-subtitle">Nắm vững kiến thức nền tảng về mạng máy tính</p>
+
+            <div class="theory-accordion">
+                <!-- Chapter 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-title">
+                            <span class="chapter-number">01</span>
+                            <span>Mạng máy tính</span>
+                        </div>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <h4>Khái niệm</h4>
+                        <p>Mạng máy tính là hệ thống các thiết bị được kết nối với nhau để truyền dữ liệu và chia sẻ tài
+                            nguyên.</p>
+
+                        <h4>Phân loại mạng</h4>
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <h5>LAN (Local Area Network)</h5>
+                                <p>Mạng cục bộ, kết nối các thiết bị trong phạm vi nhỏ như văn phòng, trường học.</p>
+                            </div>
+                            <div class="info-card">
+                                <h5>WLAN (Wireless LAN)</h5>
+                                <p>Mạng LAN không dây, sử dụng công nghệ WiFi.</p>
+                            </div>
+                            <div class="info-card">
+                                <h5>WAN (Wide Area Network)</h5>
+                                <p>Mạng diện rộng, kết nối các mạng LAN qua khoảng cách địa lý lớn.</p>
+                            </div>
+                            <div class="info-card">
+                                <h5>Internet</h5>
+                                <p>Mạng WAN toàn cầu, kết nối hàng tỷ thiết bị trên thế giới.</p>
+                            </div>
+                        </div>
+
+                        <h4>Sơ đồ mạng</h4>
+                        <div class="network-diagram">
+                            <svg viewBox="0 0 600 400" fill="none">
+                                <!-- Internet Cloud -->
+                                <ellipse cx="300" cy="80" rx="80" ry="40" fill="#2563EB" opacity="0.2" stroke="#2563EB"
+                                    stroke-width="2" />
+                                <text x="300" y="85" text-anchor="middle" fill="currentColor" font-size="16"
+                                    font-weight="600">Internet</text>
+
+                                <!-- Router -->
+                                <rect x="260" y="160" width="80" height="60" rx="8" fill="#38BDF8" stroke="#2563EB"
+                                    stroke-width="2" />
+                                <text x="300" y="195" text-anchor="middle" fill="#0F172A" font-size="14"
+                                    font-weight="600">Router</text>
+
+                                <!-- Switch -->
+                                <rect x="260" y="280" width="80" height="60" rx="8" fill="#22C55E" stroke="#059669"
+                                    stroke-width="2" />
+                                <text x="300" y="315" text-anchor="middle" fill="#0F172A" font-size="14"
+                                    font-weight="600">Switch</text>
+
+                                <!-- Connections -->
+                                <line x1="300" y1="120" x2="300" y2="160" stroke="#2563EB" stroke-width="2" />
+                                <line x1="300" y1="220" x2="300" y2="280" stroke="#2563EB" stroke-width="2" />
+                                <line x1="260" y1="340" x2="150" y2="370" stroke="#2563EB" stroke-width="2" />
+                                <line x1="300" y1="340" x2="300" y2="370" stroke="#2563EB" stroke-width="2" />
+                                <line x1="340" y1="340" x2="450" y2="370" stroke="#2563EB" stroke-width="2" />
+
+                                <!-- PCs -->
+                                <rect x="120" y="360" width="60" height="40" rx="4" fill="#F59E0B" stroke="#D97706"
+                                    stroke-width="2" />
+                                <text x="150" y="385" text-anchor="middle" fill="#0F172A" font-size="12"
+                                    font-weight="600">PC1</text>
+
+                                <rect x="270" y="360" width="60" height="40" rx="4" fill="#F59E0B" stroke="#D97706"
+                                    stroke-width="2" />
+                                <text x="300" y="385" text-anchor="middle" fill="#0F172A" font-size="12"
+                                    font-weight="600">PC2</text>
+
+                                <rect x="420" y="360" width="60" height="40" rx="4" fill="#F59E0B" stroke="#D97706"
+                                    stroke-width="2" />
+                                <text x="450" y="385" text-anchor="middle" fill="#0F172A" font-size="12"
+                                    font-weight="600">PC3</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-title">
+                            <span class="chapter-number">02</span>
+                            <span>Thiết bị mạng</span>
+                        </div>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="device-grid">
+                            <div class="device-card">
+                                <div class="device-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="3" />
+                                        <circle cx="12" cy="12" r="8" />
+                                    </svg>
+                                </div>
+                                <h5>Hub</h5>
+                                <p>Gửi dữ liệu tới mọi cổng kết nối. Không thông minh, gây lãng phí băng thông.</p>
+                            </div>
+
+                            <div class="device-card">
+                                <div class="device-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="10" rx="2" />
+                                        <line x1="6" y1="12" x2="6.01" y2="12" />
+                                        <line x1="10" y1="12" x2="10.01" y2="12" />
+                                        <line x1="14" y1="12" x2="14.01" y2="12" />
+                                        <line x1="18" y1="12" x2="18.01" y2="12" />
+                                    </svg>
+                                </div>
+                                <h5>Switch</h5>
+                                <p>Dựa vào địa chỉ MAC để gửi dữ liệu đúng thiết bị nhận. Thông minh hơn Hub.</p>
+                            </div>
+
+                            <div class="device-card">
+                                <div class="device-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
+                                        <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
+                                        <circle cx="12" cy="12" r="2" />
+                                    </svg>
+                                </div>
+                                <h5>Access Point</h5>
+                                <p>Phát sóng WiFi, cho phép các thiết bị kết nối mạng không dây.</p>
+                            </div>
+
+                            <div class="device-card">
+                                <div class="device-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" />
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                    </svg>
+                                </div>
+                                <h5>Router</h5>
+                                <p>Định tuyến dữ liệu giữa các mạng khác nhau. Kết nối mạng LAN với Internet.</p>
+                            </div>
+
+                            <div class="device-card">
+                                <div class="device-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" />
+                                        <line x1="12" y1="18" x2="12.01" y2="18" />
+                                    </svg>
+                                </div>
+                                <h5>Modem</h5>
+                                <p>Chuyển đổi tín hiệu số thành tín hiệu tương tự và ngược lại.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-title">
+                            <span class="chapter-number">03</span>
+                            <span>TCP/IP</span>
+                        </div>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="protocol-comparison">
+                            <div class="protocol-card">
+                                <h5>TCP (Transmission Control Protocol)</h5>
+                                <ul>
+                                    <li>Chia dữ liệu thành các gói nhỏ</li>
+                                    <li>Kiểm tra lỗi trong quá trình truyền</li>
+                                    <li>Truyền lại gói dữ liệu bị mất</li>
+                                    <li>Đảm bảo thứ tự các gói dữ liệu</li>
+                                    <li>Đảm bảo truyền dữ liệu đáng tin cậy</li>
+                                </ul>
+                            </div>
+
+                            <div class="protocol-card">
+                                <h5>IP (Internet Protocol)</h5>
+                                <ul>
+                                    <li>Định địa chỉ cho các thiết bị</li>
+                                    <li>Định tuyến dữ liệu qua các mạng</li>
+                                    <li>Không đảm bảo gói tin đến đích</li>
+                                    <li>Không kiểm tra lỗi</li>
+                                    <li>Hoạt động ở tầng mạng</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h4>Luồng dữ liệu TCP/IP</h4>
+                        <div class="flow-diagram">
+                            <svg viewBox="0 0 400 500" fill="none">
+                                <!-- Sender -->
+                                <rect x="100" y="40" width="200" height="60" rx="8" fill="#2563EB" stroke="#1E40AF"
+                                    stroke-width="2" />
+                                <text x="200" y="75" text-anchor="middle" fill="white" font-size="16"
+                                    font-weight="600">Dữ liệu gốc</text>
+
+                                <!-- Arrow -->
+                                <path d="M200 100 L200 130" stroke="#2563EB" stroke-width="3"
+                                    marker-end="url(#arrowhead)" />
+
+                                <!-- TCP Layer -->
+                                <rect x="100" y="140" width="200" height="60" rx="8" fill="#38BDF8" stroke="#0284C7"
+                                    stroke-width="2" />
+                                <text x="200" y="175" text-anchor="middle" fill="#0F172A" font-size="16"
+                                    font-weight="600">TCP - Chia gói</text>
+
+                                <!-- Arrow -->
+                                <path d="M200 200 L200 230" stroke="#2563EB" stroke-width="3"
+                                    marker-end="url(#arrowhead)" />
+
+                                <!-- IP Layer -->
+                                <rect x="100" y="240" width="200" height="60" rx="8" fill="#22C55E" stroke="#16A34A"
+                                    stroke-width="2" />
+                                <text x="200" y="275" text-anchor="middle" fill="#0F172A" font-size="16"
+                                    font-weight="600">IP - Định tuyến</text>
+
+                                <!-- Arrow -->
+                                <path d="M200 300 L200 330" stroke="#2563EB" stroke-width="3"
+                                    marker-end="url(#arrowhead)" />
+
+                                <!-- Internet -->
+                                <ellipse cx="200" cy="370" rx="120" ry="50" fill="#F59E0B" opacity="0.3"
+                                    stroke="#F59E0B" stroke-width="2" />
+                                <text x="200" y="375" text-anchor="middle" fill="currentColor" font-size="16"
+                                    font-weight="600">Internet</text>
+
+                                <!-- Arrow -->
+                                <path d="M200 420 L200 450" stroke="#2563EB" stroke-width="3"
+                                    marker-end="url(#arrowhead)" />
+
+                                <!-- Receiver -->
+                                <rect x="100" y="460" width="200" height="60" rx="8" fill="#2563EB" stroke="#1E40AF"
+                                    stroke-width="2" />
+                                <text x="200" y="495" text-anchor="middle" fill="white" font-size="16"
+                                    font-weight="600">Người nhận</text>
+
+                                <defs>
+                                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5"
+                                        orient="auto">
+                                        <polygon points="0 0, 10 5, 0 10" fill="#2563EB" />
+                                    </marker>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 4 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-title">
+                            <span class="chapter-number">04</span>
+                            <span>Địa chỉ IP</span>
+                        </div>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="ip-version-grid">
+                            <div class="ip-card">
+                                <h5>IPv4</h5>
+                                <p class="ip-spec">32 bits = 4 bytes</p>
+                                <div class="ip-example">
+                                    <div class="ip-block">192</div>
+                                    <div class="ip-separator">.</div>
+                                    <div class="ip-block">168</div>
+                                    <div class="ip-separator">.</div>
+                                    <div class="ip-block">1</div>
+                                    <div class="ip-separator">.</div>
+                                    <div class="ip-block">3</div>
+                                </div>
+                                <p class="ip-info">Mỗi số từ 0 đến 255</p>
+                                <p class="ip-info">Khoảng 4.3 tỷ địa chỉ</p>
+                            </div>
+
+                            <div class="ip-card">
+                                <h5>IPv6</h5>
+                                <p class="ip-spec">128 bits = 16 bytes</p>
+                                <div class="ip-example ipv6">
+                                    <span>2001:0db8:85a3::8a2e:0370:7334</span>
+                                </div>
+                                <p class="ip-info">Sử dụng hệ thập lục phân</p>
+                                <p class="ip-info">340 undecillion địa chỉ</p>
+                                <p class="ip-info">Giải quyết thiếu hụt IPv4</p>
+                            </div>
+                        </div>
+
+                        <h4>Ví dụ địa chỉ IP</h4>
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <h5>Private IP</h5>
+                                <p>192.168.1.1 - Dùng trong mạng nội bộ</p>
+                            </div>
+                            <div class="info-card">
+                                <h5>Public IP</h5>
+                                <p>8.8.8.8 - Dùng trên Internet</p>
+                            </div>
+                            <div class="info-card">
+                                <h5>Loopback</h5>
+                                <p>127.0.0.1 - Địa chỉ localhost</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 5 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-title">
+                            <span class="chapter-number">05</span>
+                            <span>DNS</span>
+                        </div>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <h4>Hệ thống phân giải tên miền</h4>
+                        <p>DNS (Domain Name System) chuyển đổi tên miền thành địa chỉ IP.</p>
+
+                        <div class="dns-diagram">
+                            <svg viewBox="0 0 500 400" fill="none">
+                                <!-- Domain name -->
+                                <rect x="50" y="50" width="180" height="70" rx="8" fill="#2563EB" stroke="#1E40AF"
+                                    stroke-width="2" />
+                                <text x="140" y="90" text-anchor="middle" fill="white" font-size="18"
+                                    font-weight="600">google.com</text>
+
+                                <!-- Arrow down -->
+                                <path d="M140 120 L140 170" stroke="#2563EB" stroke-width="3"
+                                    marker-end="url(#arrowhead2)" />
+                                <text x="160" y="150" fill="currentColor" font-size="14">Yêu cầu</text>
+
+                                <!-- DNS Server -->
+                                <rect x="50" y="180" width="180" height="70" rx="8" fill="#22C55E" stroke="#16A34A"
+                                    stroke-width="2" />
+                                <text x="140" y="220" text-anchor="middle" fill="#0F172A" font-size="18"
+                                    font-weight="600">DNS Server</text>
+
+                                <!-- Arrow down -->
+                                <path d="M140 250 L140 300" stroke="#22C55E" stroke-width="3"
+                                    marker-end="url(#arrowhead3)" />
+                                <text x="160" y="280" fill="currentColor" font-size="14">Trả về</text>
+
+                                <!-- IP Address -->
+                                <rect x="50" y="310" width="180" height="70" rx="8" fill="#F59E0B" stroke="#D97706"
+                                    stroke-width="2" />
+                                <text x="140" y="350" text-anchor="middle" fill="#0F172A" font-size="18"
+                                    font-weight="600">142.250.xxx.xxx</text>
+
+                                <!-- Example list -->
+                                <g transform="translate(280, 50)">
+                                    <text x="0" y="0" fill="currentColor" font-size="16" font-weight="600">Ví dụ
+                                        DNS:</text>
+                                    <text x="0" y="30" fill="currentColor" font-size="14">google.com →
+                                        142.250.xxx.xxx</text>
+                                    <text x="0" y="60" fill="currentColor" font-size="14">facebook.com →
+                                        157.240.xxx.xxx</text>
+                                    <text x="0" y="90" fill="currentColor" font-size="14">youtube.com →
+                                        142.251.xxx.xxx</text>
+                                    <text x="0" y="150" fill="currentColor" font-size="14" font-weight="600">Lợi
+                                        ích:</text>
+                                    <text x="0" y="180" fill="currentColor" font-size="13">- Dễ nhớ hơn địa chỉ
+                                        IP</text>
+                                    <text x="0" y="210" fill="currentColor" font-size="13">- Thay đổi IP không ảnh
+                                        hưởng</text>
+                                    <text x="0" y="240" fill="currentColor" font-size="13">- Tự động cân bằng tải</text>
+                                </g>
+
+                                <defs>
+                                    <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="5" refY="5"
+                                        orient="auto">
+                                        <polygon points="0 0, 10 5, 0 10" fill="#2563EB" />
+                                    </marker>
+                                    <marker id="arrowhead3" markerWidth="10" markerHeight="10" refX="5" refY="5"
+                                        orient="auto">
+                                        <polygon points="0 0, 10 5, 0 10" fill="#22C55E" />
+                                    </marker>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 6 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-title">
+                            <span class="chapter-number">06</span>
+                            <span>Email</span>
+                        </div>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="protocol-grid">
+                            <div class="protocol-card">
+                                <h5>SMTP</h5>
+                                <p class="protocol-full">Simple Mail Transfer Protocol</p>
+                                <p>Giao thức gửi email từ client đến server hoặc giữa các server.</p>
+                                <p class="protocol-port">Cổng: 25, 587, 465</p>
+                            </div>
+
+                            <div class="protocol-card">
+                                <h5>POP3</h5>
+                                <p class="protocol-full">Post Office Protocol v3</p>
+                                <p>Tải email về máy tính và xóa khỏi server. Email chỉ có trên một thiết bị.</p>
+                                <p class="protocol-port">Cổng: 110, 995</p>
+                            </div>
+
+                            <div class="protocol-card">
+                                <h5>IMAP</h5>
+                                <p class="protocol-full">Internet Message Access Protocol</p>
+                                <p>Đồng bộ email trên nhiều thiết bị. Email luôn lưu trên server.</p>
+                                <p class="protocol-port">Cổng: 143, 993</p>
+                            </div>
+                        </div>
+
+                        <h4>Luồng hoạt động Email</h4>
+                        <div class="email-flow">
+                            <svg viewBox="0 0 600 350" fill="none">
+                                <!-- Sender -->
+                                <rect x="50" y="50" width="120" height="80" rx="8" fill="#2563EB" stroke="#1E40AF"
+                                    stroke-width="2" />
+                                <text x="110" y="95" text-anchor="middle" fill="white" font-size="16"
+                                    font-weight="600">Người gửi</text>
+
+                                <!-- SMTP Arrow -->
+                                <path d="M170 90 L230 90" stroke="#2563EB" stroke-width="3"
+                                    marker-end="url(#arrowhead4)" />
+                                <text x="200" y="80" text-anchor="middle" fill="currentColor" font-size="14"
+                                    font-weight="600">SMTP</text>
+
+                                <!-- Mail Server -->
+                                <rect x="240" y="50" width="120" height="80" rx="8" fill="#22C55E" stroke="#16A34A"
+                                    stroke-width="2" />
+                                <text x="300" y="85" text-anchor="middle" fill="#0F172A" font-size="16"
+                                    font-weight="600">Mail</text>
+                                <text x="300" y="105" text-anchor="middle" fill="#0F172A" font-size="16"
+                                    font-weight="600">Server</text>
+
+                                <!-- POP3/IMAP Arrows -->
+                                <path d="M360 70 L420 110" stroke="#F59E0B" stroke-width="3"
+                                    marker-end="url(#arrowhead5)" />
+                                <text x="400" y="80" text-anchor="middle" fill="currentColor" font-size="14"
+                                    font-weight="600">POP3</text>
+
+                                <path d="M360 110 L420 110" stroke="#F59E0B" stroke-width="3"
+                                    marker-end="url(#arrowhead5)" />
+                                <text x="390" y="130" text-anchor="middle" fill="currentColor" font-size="14"
+                                    font-weight="600">IMAP</text>
+
+                                <!-- Receiver -->
+                                <rect x="430" y="70" width="120" height="80" rx="8" fill="#2563EB" stroke="#1E40AF"
+                                    stroke-width="2" />
+                                <text x="490" y="115" text-anchor="middle" fill="white" font-size="16"
+                                    font-weight="600">Người nhận</text>
+
+                                <!-- Comparison -->
+                                <g transform="translate(50, 200)">
+                                    <text x="0" y="0" fill="currentColor" font-size="16" font-weight="600">So sánh POP3
+                                        vs IMAP:</text>
+                                    <rect x="0" y="20" width="240" height="100" rx="6" fill="#FEF3C7" stroke="#F59E0B"
+                                        stroke-width="2" />
+                                    <text x="120" y="45" text-anchor="middle" fill="#0F172A" font-size="14"
+                                        font-weight="600">POP3</text>
+                                    <text x="120" y="70" text-anchor="middle" fill="#0F172A" font-size="12">Tải về và
+                                        xóa</text>
+                                    <text x="120" y="90" text-anchor="middle" fill="#0F172A" font-size="12">Chỉ 1 thiết
+                                        bị</text>
+                                    <text x="120" y="110" text-anchor="middle" fill="#0F172A" font-size="12">Tiết kiệm
+                                        dung lượng server</text>
+
+                                    <rect x="260" y="20" width="240" height="100" rx="6" fill="#DBEAFE" stroke="#2563EB"
+                                        stroke-width="2" />
+                                    <text x="380" y="45" text-anchor="middle" fill="#0F172A" font-size="14"
+                                        font-weight="600">IMAP</text>
+                                    <text x="380" y="70" text-anchor="middle" fill="#0F172A" font-size="12">Đồng bộ
+                                        nhiều thiết bị</text>
+                                    <text x="380" y="90" text-anchor="middle" fill="#0F172A" font-size="12">Email lưu
+                                        trên server</text>
+                                    <text x="380" y="110" text-anchor="middle" fill="#0F172A" font-size="12">Truy cập
+                                        mọi lúc mọi nơi</text>
+                                </g>
+
+                                <defs>
+                                    <marker id="arrowhead4" markerWidth="10" markerHeight="10" refX="5" refY="5"
+                                        orient="auto">
+                                        <polygon points="0 0, 10 5, 0 10" fill="#2563EB" />
+                                    </marker>
+                                    <marker id="arrowhead5" markerWidth="10" markerHeight="10" refX="5" refY="5"
+                                        orient="auto">
+                                        <polygon points="0 0, 10 5, 0 10" fill="#F59E0B" />
+                                    </marker>
+                                </defs>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 7 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-title">
+                            <span class="chapter-number">07</span>
+                            <span>HTTP & HTTPS</span>
+                        </div>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="http-comparison">
+                            <div class="http-card insecure">
+                                <div class="http-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                        <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+                                    </svg>
+                                </div>
+                                <h5>HTTP</h5>
+                                <p class="protocol-full">HyperText Transfer Protocol</p>
+                                <ul>
+                                    <li>Không mã hóa dữ liệu</li>
+                                    <li>Dễ bị đánh cắp thông tin</li>
+                                    <li>Cổng 80</li>
+                                    <li>Không an toàn</li>
+                                </ul>
+                                <div class="security-badge danger">Không an toàn</div>
+                            </div>
+
+                            <div class="http-card secure">
+                                <div class="http-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                    </svg>
+                                </div>
+                                <h5>HTTPS</h5>
+                                <p class="protocol-full">HTTP Secure</p>
+                                <ul>
+                                    <li>Mã hóa dữ liệu bằng SSL/TLS</li>
+                                    <li>Bảo vệ thông tin người dùng</li>
+                                    <li>Cổng 443</li>
+                                    <li>Xác thực website</li>
+                                </ul>
+                                <div class="security-badge success">An toàn</div>
+                            </div>
+                        </div>
+
+                        <h4>Cách nhận biết</h4>
+                        <div class="info-cards">
+                            <div class="info-card">
+                                <h5>HTTP</h5>
+                                <p>http://example.com</p>
+                                <p>Không có biểu tượng khóa</p>
+                            </div>
+                            <div class="info-card">
+                                <h5>HTTPS</h5>
+                                <p>https://example.com</p>
+                                <p>Có biểu tượng khóa trên trình duyệt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 8 -->
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <div class="accordion-title">
+                            <span class="chapter-number">08</span>
+                            <span>Ethernet - MAC - ARP - ICMP</span>
+                        </div>
+                        <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="protocol-grid">
+                            <div class="protocol-card">
+                                <h5>Ethernet</h5>
+                                <p>Công nghệ mạng LAN phổ biến nhất. Sử dụng cáp mạng để kết nối các thiết bị.</p>
+                                <p class="protocol-info">Tốc độ: 10 Mbps, 100 Mbps, 1 Gbps, 10 Gbps</p>
+                            </div>
+
+                            <div class="protocol-card">
+                                <h5>MAC Address</h5>
+                                <p>Địa chỉ vật lý duy nhất của card mạng. Gồm 48 bits (6 bytes).</p>
+                                <p class="protocol-info">Ví dụ: 00:1A:2B:3C:4D:5E</p>
+                            </div>
+
+                            <div class="protocol-card">
+                                <h5>ARP</h5>
+                                <p>Address Resolution Protocol - Chuyển đổi địa chỉ IP thành địa chỉ MAC.</p>
+                                <p class="protocol-info">IP → MAC</p>
+                            </div>
+
+                            <div class="protocol-card">
+                                <h5>ICMP</h5>
+                                <p>Internet Control Message Protocol - Chẩn đoán và báo lỗi mạng.</p>
+                                <p class="protocol-info">Lệnh: ping, tracert</p>
+                            </div>
+                        </div>
+
+                        <h4>Ví dụ sử dụng ICMP</h4>
+                        <div class="code-block">
+                            <code>ping google.com</code>
+                        </div>
+                        <p>Lệnh này kiểm tra kết nối mạng đến google.com và đo thời gian phản hồi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Flashcards Section -->
+        <section class="section" id="flashcards">
+            <h2 class="page-title">Flashcards</h2>
+            <p class="page-subtitle">Ôn tập kiến thức với thẻ ghi nhớ</p>
+
+            <div class="flashcard-container">
+                <div class="flashcard" id="flashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <div class="card-label">Câu hỏi</div>
+                            <div class="card-content" id="flashcardQuestion">LAN là gì?</div>
+                            <div class="card-hint">Nhấn để xem đáp án</div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="card-label">Đáp án</div>
+                            <div class="card-content" id="flashcardAnswer">Mạng cục bộ (Local Area Network)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flashcard-info">
+                    <span class="card-counter" id="cardCounter">1 / 30</span>
+                    <button class="btn-mark" id="markLearned">Đã học</button>
+                </div>
+
+                <div class="flashcard-controls">
+                    <button class="btn-control" id="prevCard" aria-label="Previous card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg>
+                    </button>
+                    <button class="btn-control" id="randomCard" aria-label="Random card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" />
+                        </svg>
+                    </button>
+                    <button class="btn-control" id="nextCard" aria-label="Next card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="learned-progress">
+                    <div class="progress-label">
+                        <span>Đã học</span>
+                        <span id="learnedCount">0 / 30</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="learnedProgress" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="section" id="quiz">
+            <h2 class="page-title">Kiểm tra</h2>
+            <p class="page-subtitle">Đánh giá kiến thức của bạn</p>
+
+            <div class="quiz-container" id="quizStart">
+                <div class="quiz-intro">
+                    <svg class="quiz-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                    <h3>Sẵn sàng kiểm tra?</h3>
+                    <p>50 câu hỏi trắc nghiệm về mạng máy tính</p>
+                    <button class="btn-primary" id="startQuiz">Bắt đầu</button>
+                </div>
+            </div>
+
+            <div class="quiz-container hidden" id="quizActive">
+                <div class="quiz-header">
+                    <div class="quiz-progress-bar">
+                        <div class="quiz-progress-fill" id="quizProgressBar"></div>
+                    </div>
+                    <div class="quiz-stats">
+                        <span id="quizQuestion">Câu hỏi 1/50</span>
+                        <span id="quizScore">Điểm: 0</span>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3 id="questionText">Câu hỏi sẽ hiển thị ở đây</h3>
+                </div>
+
+                <div class="quiz-options" id="quizOptions">
+                    <!-- Options will be inserted by JavaScript -->
+                </div>
+
+                <div class="quiz-feedback hidden" id="quizFeedback">
+                    <div class="feedback-content" id="feedbackContent"></div>
+                    <button class="btn-primary" id="nextQuestion">Câu tiếp theo</button>
+                </div>
+            </div>
+
+            <div class="quiz-container hidden" id="quizResults">
+                <div class="results-card">
+                    <svg class="results-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                    </svg>
+                    <h3>Hoàn thành!</h3>
+                    <div class="results-score">
+                        <div class="score-circle">
+                            <svg viewBox="0 0 120 120">
+                                <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" stroke-width="8" />
+                                <circle cx="60" cy="60" r="54" fill="none" stroke="#2563EB" stroke-width="8"
+                                    stroke-dasharray="339.292" id="scoreCircle" transform="rotate(-90 60 60)" />
+                            </svg>
+                            <div class="score-text">
+                                <span class="score-number" id="finalScore">0</span>
+                                <span class="score-total">/50</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="results-details">
+                        <div class="result-item">
+                            <span>Tỷ lệ chính xác</span>
+                            <span class="result-value" id="accuracy">0%</span>
+                        </div>
+                        <div class="result-item">
+                            <span>Xếp loại</span>
+                            <span class="result-value" id="grade">-</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary" id="retryQuiz">Làm lại</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Section -->
+        <section class="section" id="progress">
+            <h2 class="page-title">Tiến độ</h2>
+            <p class="page-subtitle">Theo dõi quá trình học tập của bạn</p>
+
+            <div class="progress-grid">
+                <div class="progress-card">
+                    <div class="progress-card-header">
+                        <h4>Flashcards</h4>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                            <line x1="9" y1="9" x2="15" y2="9" />
+                            <line x1="9" y1="15" x2="15" y2="15" />
+                        </svg>
+                    </div>
+                    <div class="progress-stats">
+                        <div class="stat-large" id="flashcardsLearned">0</div>
+                        <div class="stat-label">/ 30 đã học</div>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="flashcardsProgress"></div>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-card-header">
+                        <h4>Bài kiểm tra</h4>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                    </div>
+                    <div class="progress-stats">
+                        <div class="stat-large" id="quizzesCompleted">0</div>
+                        <div class="stat-label">Bài đã làm</div>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-card-header">
+                        <h4>Điểm cao nhất</h4>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                    </div>
+                    <div class="progress-stats">
+                        <div class="stat-large" id="highestScore">0</div>
+                        <div class="stat-label">/ 50 điểm</div>
+                    </div>
+                </div>
+
+                <div class="progress-card">
+                    <div class="progress-card-header">
+                        <h4>Hoàn thành</h4>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <div class="circular-progress">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#e5e7eb" stroke-width="8" />
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#2563EB" stroke-width="8"
+                                stroke-dasharray="283" id="completionCircle" transform="rotate(-90 50 50)" />
+                        </svg>
+                        <div class="circular-text" id="completionPercent">0%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h3>Hoạt động gần đây</h3>
+                <div class="activity-list" id="activityList">
+                    <div class="activity-empty">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="12" />
+                            <line x1="12" y1="16" x2="12.01" y2="16" />
+                        </svg>
+                        <p>Chưa có hoạt động nào</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
