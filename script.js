@@ -550,6 +550,7 @@ function showQuizQuestion() {
 
 function selectAnswer(selectedIndex) {
     const question = activeQuizData[currentQuizQuestion];
+    console.log('Current question:', question); // Debug: kiểm tra xem có explanation không
     const options = document.querySelectorAll('.quiz-option');
     const isCorrect = selectedIndex === question.correct;
 
