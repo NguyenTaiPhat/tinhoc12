@@ -502,6 +502,7 @@ function startQuiz() {
                 question: q.question,
                 options: shuffledOptions.map(opt => opt.text),
                 correct: newCorrectIndex,
+                explanation: q.explanation,
                 originalQuestion: q.question
             };
         });
@@ -511,6 +512,7 @@ function startQuiz() {
             question: q.question,
             options: [...q.options],
             correct: q.correct,
+            explanation: q.explanation,
             originalQuestion: q.question
         }));
     }
