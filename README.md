@@ -48,6 +48,9 @@
 
 ### 4. **Kiểm tra**
 - 50 câu hỏi trắc nghiệm
+- **🆕 2 chế độ làm bài:**
+  - **Xáo trộn:** Thay đổi thứ tự câu hỏi và đáp án (tránh nhớ vị trí)
+  - **Giữ nguyên:** Thứ tự cố định như đề thi thật
 - Phản hồi tức thời
 - Thanh tiến độ
 - Kết quả chi tiết với:
@@ -231,9 +234,13 @@ TINHOC/
 
 1. **Học tuần tự:** Đọc lý thuyết → Làm flashcards → Kiểm tra
 2. **Ôn tập thường xuyên:** Xem lại flashcards mỗi ngày
-3. **Làm quiz nhiều lần:** Để ghi nhớ tốt hơn
+3. **🆕 Làm quiz thông minh:**
+   - **Khi học:** Dùng chế độ "Xáo trộn" để ghi nhớ tốt hơn
+   - **Trước thi:** Dùng chế độ "Giữ nguyên" để quen với đề
 4. **Theo dõi tiến độ:** Check trang Progress thường xuyên
 5. **Sao lưu dữ liệu:** Backup mỗi tuần!
+
+👉 **[Xem chi tiết tính năng quiz mới](TINH-NANG-MOI.md)**
 
 ---
 

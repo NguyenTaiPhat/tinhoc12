@@ -67,6 +67,9 @@ LƯU Ý: Sao lưu thường xuyên để tránh mất dữ liệu!
 ✓ 8 chương lý thuyết với sơ đồ tương tác
 ✓ 30 flashcards với hiệu ứng 3D flip
 ✓ 50 câu hỏi trắc nghiệm
+✓ 🆕 2 CHẾ ĐỘ QUIZ:
+  - XÁO TRỘN: Thay đổi thứ tự câu hỏi & đáp án
+  - GIỮ NGUYÊN: Thứ tự cố định như đề thi
 ✓ Theo dõi tiến độ học tập
 ✓ Light/Dark mode
 ✓ Mobile friendly

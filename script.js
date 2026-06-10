@@ -221,6 +221,8 @@ let learnedCards = [];
 let currentQuizQuestion = 0;
 let quizScore = 0;
 let quizAnswers = [];
+let quizMode = 'shuffle'; // 'shuffle' or 'original'
+let activeQuizData = []; // Bản copy của quiz data để xáo trộn
 
 // ===================================
 // LocalStorage Management
@@ -456,6 +458,16 @@ function loadFlashcardProgress() {
 // Quiz Management
 // ===================================
 
+// Hàm xáo trộn mảng (Fisher-Yates shuffle)
+function shuffleArray(array) {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
+
 function initQuiz() {
     const startBtn = document.getElementById('startQuiz');
     const nextBtn = document.getElementById('nextQuestion');
@@ -467,9 +479,41 @@ function initQuiz() {
 }
 
 function startQuiz() {
+    // Lấy chế độ quiz từ radio button
+    const selectedMode = document.querySelector('input[name="quizMode"]:checked').value;
+    quizMode = selectedMode;
+
     currentQuizQuestion = 0;
     quizScore = 0;
     quizAnswers = [];
+
+    // Chuẩn bị dữ liệu quiz
+    if (quizMode === 'shuffle') {
+        // Xáo trộn câu hỏi
+        activeQuizData = shuffleArray(quizData).map(q => {
+            // Tạo mảng options kèm index gốc
+            const optionsWithIndex = q.options.map((opt, idx) => ({ text: opt, originalIndex: idx }));
+            // Xáo trộn options
+            const shuffledOptions = shuffleArray(optionsWithIndex);
+            // Tìm vị trí mới của đáp án đúng
+            const newCorrectIndex = shuffledOptions.findIndex(opt => opt.originalIndex === q.correct);
+
+            return {
+                question: q.question,
+                options: shuffledOptions.map(opt => opt.text),
+                correct: newCorrectIndex,
+                originalQuestion: q.question
+            };
+        });
+    } else {
+        // Giữ nguyên
+        activeQuizData = quizData.map(q => ({
+            question: q.question,
+            options: [...q.options],
+            correct: q.correct,
+            originalQuestion: q.question
+        }));
+    }
 
     document.getElementById('quizStart').classList.add('hidden');
     document.getElementById('quizActive').classList.remove('hidden');
@@ -479,13 +523,13 @@ function startQuiz() {
 }
 
 function showQuizQuestion() {
-    const question = quizData[currentQuizQuestion];
+    const question = activeQuizData[currentQuizQuestion];
 
     document.getElementById('questionText').textContent = question.question;
     document.getElementById('quizQuestion').textContent = `Câu hỏi ${currentQuizQuestion + 1}/50`;
     document.getElementById('quizScore').textContent = `Điểm: ${quizScore}`;
 
-    const progress = ((currentQuizQuestion) / quizData.length) * 100;
+    const progress = ((currentQuizQuestion) / activeQuizData.length) * 100;
     document.getElementById('quizProgressBar').style.width = `${progress}%`;
 
     const optionsContainer = document.getElementById('quizOptions');
@@ -503,7 +547,7 @@ function showQuizQuestion() {
 }
 
 function selectAnswer(selectedIndex) {
-    const question = quizData[currentQuizQuestion];
+    const question = activeQuizData[currentQuizQuestion];
     const options = document.querySelectorAll('.quiz-option');
     const isCorrect = selectedIndex === question.correct;
 
@@ -532,7 +576,7 @@ function selectAnswer(selectedIndex) {
 function nextQuizQuestion() {
     currentQuizQuestion++;
 
-    if (currentQuizQuestion < quizData.length) {
+    if (currentQuizQuestion < activeQuizData.length) {
         showQuizQuestion();
     } else {
         showQuizResults();
@@ -543,7 +587,7 @@ function showQuizResults() {
     document.getElementById('quizActive').classList.add('hidden');
     document.getElementById('quizResults').classList.remove('hidden');
 
-    const percentage = (quizScore / quizData.length) * 100;
+    const percentage = (quizScore / activeQuizData.length) * 100;
     const accuracy = percentage.toFixed(1);
 
     let grade = '';
@@ -570,12 +614,14 @@ function showQuizResults() {
     saveToLocalStorage('highestScore', highestScore);
 
     // Add activity
-    addActivity('Quiz', `Hoàn thành bài kiểm tra - Điểm: ${quizScore}/50`);
+    const modeText = quizMode === 'shuffle' ? 'Xáo trộn' : 'Giữ nguyên';
+    addActivity('Quiz', `Hoàn thành bài kiểm tra (${modeText}) - Điểm: ${quizScore}/50`);
 }
 
 function resetQuiz() {
     document.getElementById('quizResults').classList.add('hidden');
     document.getElementById('quizStart').classList.remove('hidden');
+    activeQuizData = [];
 }
 
 // ===================================

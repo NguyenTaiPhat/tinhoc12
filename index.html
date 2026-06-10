@@ -1029,7 +1029,35 @@
                     </svg>
                     <h3>Sẵn sàng kiểm tra?</h3>
                     <p>50 câu hỏi trắc nghiệm về mạng máy tính</p>
-                    <button class="btn-primary" id="startQuiz">Bắt đầu</button>
+
+                    <div class="quiz-mode-selector">
+                        <h4>Chọn chế độ:</h4>
+                        <div class="mode-options">
+                            <label class="mode-option">
+                                <input type="radio" name="quizMode" value="shuffle" checked>
+                                <div class="mode-card">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" />
+                                    </svg>
+                                    <h5>Xáo trộn</h5>
+                                    <p>Thay đổi thứ tự câu hỏi và đáp án</p>
+                                </div>
+                            </label>
+                            <label class="mode-option">
+                                <input type="radio" name="quizMode" value="original">
+                                <div class="mode-card">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                        <polyline points="9 22 9 12 15 12 15 22" />
+                                    </svg>
+                                    <h5>Giữ nguyên</h5>
+                                    <p>Thứ tự câu hỏi và đáp án không đổi</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" id="startQuiz">Bắt đầu làm bài</button>
                 </div>
             </div>
 
