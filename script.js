@@ -159,56 +159,56 @@ const flashcardsData = [
 ];
 
 const quizData = [
-    { question: "LAN là viết tắt của gì?", options: ["Local Area Network", "Large Area Network", "Long Area Network", "Limited Area Network"], correct: 0 },
-    { question: "WAN là viết tắt của gì?", options: ["Wide Area Network", "Wireless Area Network", "World Area Network", "Web Area Network"], correct: 0 },
-    { question: "Thiết bị nào gửi dữ liệu tới mọi cổng?", options: ["Switch", "Hub", "Router", "Modem"], correct: 1 },
-    { question: "Thiết bị nào dựa vào địa chỉ MAC?", options: ["Hub", "Modem", "Switch", "Access Point"], correct: 2 },
-    { question: "Thiết bị nào định tuyến giữa các mạng?", options: ["Hub", "Switch", "Modem", "Router"], correct: 3 },
-    { question: "TCP là giao thức ở tầng nào?", options: ["Vật lý", "Liên kết", "Mạng", "Giao vận"], correct: 3 },
-    { question: "IPv4 có bao nhiêu bits?", options: ["16 bits", "32 bits", "64 bits", "128 bits"], correct: 1 },
-    { question: "IPv6 có bao nhiêu bits?", options: ["32 bits", "64 bits", "128 bits", "256 bits"], correct: 2 },
-    { question: "DNS làm gì?", options: ["Mã hóa dữ liệu", "Chuyển đổi tên miền thành IP", "Gửi email", "Định tuyến"], correct: 1 },
-    { question: "SMTP dùng để làm gì?", options: ["Nhận email", "Gửi email", "Đồng bộ email", "Xóa email"], correct: 1 },
-    { question: "POP3 làm gì với email?", options: ["Gửi", "Tải về và xóa", "Đồng bộ", "Mã hóa"], correct: 1 },
-    { question: "IMAP khác POP3 ở điểm nào?", options: ["Gửi nhanh hơn", "Đồng bộ nhiều thiết bị", "Bảo mật hơn", "Dễ dùng hơn"], correct: 1 },
-    { question: "HTTP sử dụng cổng nào?", options: ["21", "25", "80", "443"], correct: 2 },
-    { question: "HTTPS sử dụng cổng nào?", options: ["80", "443", "8080", "3000"], correct: 1 },
-    { question: "HTTPS khác HTTP ở điểm nào?", options: ["Nhanh hơn", "Có mã hóa", "Cổng khác", "Giao diện đẹp hơn"], correct: 1 },
-    { question: "MAC Address có bao nhiêu bytes?", options: ["4 bytes", "6 bytes", "8 bytes", "12 bytes"], correct: 1 },
-    { question: "ARP chuyển đổi gì?", options: ["IP sang MAC", "MAC sang IP", "Domain sang IP", "IP sang Domain"], correct: 0 },
-    { question: "ICMP dùng cho lệnh nào?", options: ["telnet", "ftp", "ping", "ssh"], correct: 2 },
-    { question: "Địa chỉ localhost là gì?", options: ["192.168.1.1", "127.0.0.1", "10.0.0.1", "8.8.8.8"], correct: 1 },
-    { question: "Ethernet là công nghệ mạng gì?", options: ["WAN", "LAN", "MAN", "PAN"], correct: 1 },
-    { question: "WiFi là loại mạng gì?", options: ["LAN có dây", "WLAN", "WAN", "Internet"], correct: 1 },
-    { question: "Router hoạt động ở tầng nào?", options: ["Vật lý", "Liên kết", "Mạng", "Giao vận"], correct: 2 },
-    { question: "Switch hoạt động ở tầng nào?", options: ["Vật lý", "Liên kết", "Mạng", "Giao vận"], correct: 1 },
-    { question: "Hub hoạt động ở tầng nào?", options: ["Vật lý", "Liên kết", "Mạng", "Giao vận"], correct: 0 },
-    { question: "SSL/TLS dùng để làm gì?", options: ["Tăng tốc", "Mã hóa", "Định tuyến", "Nén dữ liệu"], correct: 1 },
-    { question: "Giao thức nào an toàn hơn?", options: ["HTTP", "HTTPS", "FTP", "Telnet"], correct: 1 },
-    { question: "Access Point phát sóng gì?", options: ["Bluetooth", "WiFi", "Radio", "TV"], correct: 1 },
-    { question: "Modem chuyển đổi tín hiệu gì?", options: ["Số sang tương tự", "Cao sang thấp", "AC sang DC", "Analog sang Digital"], correct: 0 },
-    { question: "Ví dụ nào là địa chỉ IPv4?", options: ["2001:db8::1", "192.168.1.1", "FF:FF:FF:FF:FF:FF", "google.com"], correct: 1 },
-    { question: "Ví dụ nào là địa chỉ IPv6?", options: ["192.168.1.1", "2001:0db8::1", "127.0.0.1", "8.8.8.8"], correct: 1 },
-    { question: "TCP đảm bảo điều gì?", options: ["Tốc độ nhanh", "Truyền đáng tin cậy", "Mã hóa", "Nén dữ liệu"], correct: 1 },
-    { question: "IP làm nhiệm vụ gì?", options: ["Mã hóa", "Định địa chỉ", "Gửi email", "Hiển thị web"], correct: 1 },
-    { question: "Băng thông là gì?", options: ["Độ rộng cáp", "Lượng dữ liệu truyền được", "Tốc độ CPU", "Dung lượng RAM"], correct: 1 },
-    { question: "Private IP dùng ở đâu?", options: ["Internet", "Mạng nội bộ", "Server công khai", "Website"], correct: 1 },
-    { question: "Public IP dùng ở đâu?", options: ["Mạng nội bộ", "Internet", "Localhost", "LAN"], correct: 1 },
-    { question: "DNS Server lưu trữ gì?", options: ["Email", "Tên miền và IP", "Mật khẩu", "File"], correct: 1 },
-    { question: "SMTP Server làm gì?", options: ["Nhận email", "Gửi email", "Lưu email", "Xóa email"], correct: 1 },
-    { question: "Giao thức nào không mã hóa?", options: ["HTTPS", "SSH", "HTTP", "SSL"], correct: 2 },
-    { question: "Tốc độ Ethernet phổ biến là?", options: ["1 Mbps", "10 Mbps", "100 Mbps", "Tất cả đều đúng"], correct: 3 },
-    { question: "Lệnh ping sử dụng giao thức gì?", options: ["TCP", "UDP", "ICMP", "HTTP"], correct: 2 },
-    { question: "MAC Address được gán ở đâu?", options: ["Software", "Hardware", "Router", "ISP"], correct: 1 },
-    { question: "IP Address được gán bởi?", options: ["Nhà sản xuất", "DHCP hoặc thủ công", "DNS", "HTTP"], correct: 1 },
-    { question: "Mạng nào có phạm vi lớn nhất?", options: ["LAN", "WLAN", "MAN", "WAN"], correct: 3 },
-    { question: "Thiết bị nào cần cho WiFi?", options: ["Hub", "Switch", "Access Point", "Modem"], correct: 2 },
-    { question: "Gateway là gì?", options: ["Cổng kết nối mạng", "Loại cáp", "Phần mềm", "Trình duyệt"], correct: 0 },
-    { question: "Firewall làm gì?", options: ["Tăng tốc", "Bảo vệ mạng", "Lưu dữ liệu", "Hiển thị web"], correct: 1 },
-    { question: "VPN là gì?", options: ["Virtual Private Network", "Very Public Network", "Visual Private Network", "Virtual Public Network"], correct: 0 },
-    { question: "FTP dùng để làm gì?", options: ["Gửi email", "Truyền file", "Duyệt web", "Chat"], correct: 1 },
-    { question: "HTTP là giao thức nào?", options: ["Email", "File transfer", "Web", "Chat"], correct: 2 },
-    { question: "Tracert làm gì?", options: ["Tìm virus", "Theo dõi đường đi gói tin", "Tăng tốc mạng", "Mã hóa"], correct: 1 }
+    { question: "LAN là viết tắt của gì?", options: ["Local Area Network", "Large Area Network", "Long Area Network", "Limited Area Network"], correct: 0, explanation: "LAN (Local Area Network) là mạng cục bộ, kết nối các thiết bị trong phạm vi nhỏ như văn phòng, trường học, hoặc nhà ở. LAN có tốc độ cao và chi phí thấp." },
+    { question: "WAN là viết tắt của gì?", options: ["Wide Area Network", "Wireless Area Network", "World Area Network", "Web Area Network"], correct: 0, explanation: "WAN (Wide Area Network) là mạng diện rộng, kết nối các mạng LAN qua khoảng cách địa lý lớn như giữa các thành phố hoặc quốc gia. Internet là ví dụ lớn nhất của WAN." },
+    { question: "Thiết bị nào gửi dữ liệu tới mọi cổng?", options: ["Switch", "Hub", "Router", "Modem"], correct: 1, explanation: "Hub là thiết bị mạng đơn giản nhất, khi nhận dữ liệu từ một cổng, nó sẽ gửi (broadcast) dữ liệu đó tới TẤT CẢ các cổng khác. Điều này gây lãng phí băng thông và giảm hiệu suất mạng." },
+    { question: "Thiết bị nào dựa vào địa chỉ MAC?", options: ["Hub", "Modem", "Switch", "Access Point"], correct: 2, explanation: "Switch là thiết bị thông minh, sử dụng bảng địa chỉ MAC để xác định cổng nào kết nối với thiết bị nào. Khi nhận dữ liệu, Switch chỉ gửi đến đúng cổng của thiết bị đích, tiết kiệm băng thông." },
+    { question: "Thiết bị nào định tuyến giữa các mạng?", options: ["Hub", "Switch", "Modem", "Router"], correct: 3, explanation: "Router là thiết bị định tuyến, hoạt động ở tầng mạng (Layer 3). Router kết nối các mạng khác nhau với nhau, chọn đường đi tốt nhất cho dữ liệu, và thường được dùng để kết nối mạng LAN với Internet." },
+    { question: "TCP là giao thức ở tầng nào?", options: ["Vật lý", "Liên kết", "Mạng", "Giao vận"], correct: 3, explanation: "TCP (Transmission Control Protocol) hoạt động ở tầng Giao vận (Transport Layer - Layer 4) trong mô hình OSI. TCP đảm bảo dữ liệu được truyền đầy đủ, đúng thứ tự và không bị lỗi." },
+    { question: "IPv4 có bao nhiêu bits?", options: ["16 bits", "32 bits", "64 bits", "128 bits"], correct: 1, explanation: "IPv4 sử dụng 32 bits (4 bytes) để biểu diễn địa chỉ IP. Ví dụ: 192.168.1.1 gồm 4 số từ 0-255. Với 32 bits, IPv4 có thể tạo ra khoảng 4.3 tỷ địa chỉ." },
+    { question: "IPv6 có bao nhiêu bits?", options: ["32 bits", "64 bits", "128 bits", "256 bits"], correct: 2, explanation: "IPv6 sử dụng 128 bits để biểu diễn địa chỉ, gấp 4 lần IPv4. Điều này cho phép tạo ra số lượng địa chỉ khổng lồ (340 undecillion), giải quyết vấn đề thiếu hụt địa chỉ của IPv4." },
+    { question: "DNS làm gì?", options: ["Mã hóa dữ liệu", "Chuyển đổi tên miền thành IP", "Gửi email", "Định tuyến"], correct: 1, explanation: "DNS (Domain Name System) là hệ thống chuyển đổi tên miền dễ nhớ (như google.com) thành địa chỉ IP (như 142.250.xxx.xxx) mà máy tính hiểu được. DNS giống như \"danh bạ điện thoại\" của Internet." },
+    { question: "SMTP dùng để làm gì?", options: ["Nhận email", "Gửi email", "Đồng bộ email", "Xóa email"], correct: 1, explanation: "SMTP (Simple Mail Transfer Protocol) là giao thức dùng để GỬI email từ client đến mail server, hoặc giữa các mail server với nhau. Cổng mặc định: 25, 587, 465." },
+    { question: "POP3 làm gì với email?", options: ["Gửi", "Tải về và xóa", "Đồng bộ", "Mã hóa"], correct: 1, explanation: "POP3 (Post Office Protocol v3) TẢI email từ server VỀ máy tính và XÓA khỏi server. Email chỉ tồn tại trên một thiết bị duy nhất." },
+    { question: "IMAP khác POP3 ở điểm nào?", options: ["Gửi nhanh hơn", "Đồng bộ nhiều thiết bị", "Bảo mật hơn", "Dễ dùng hơn"], correct: 1, explanation: "IMAP (Internet Message Access Protocol) ĐỒNG BỘ email trên nhiều thiết bị. Email luôn lưu trên server, bạn có thể truy cập từ điện thoại, máy tính, tablet cùng lúc." },
+    { question: "HTTP sử dụng cổng nào?", options: ["21", "25", "80", "443"], correct: 2, explanation: "HTTP (HyperText Transfer Protocol) sử dụng cổng 80. Đây là giao thức truyền tải web KHÔNG MÃ HÓA, dữ liệu có thể bị đánh cắp." },
+    { question: "HTTPS sử dụng cổng nào?", options: ["80", "443", "8080", "3000"], correct: 1, explanation: "HTTPS (HTTP Secure) sử dụng cổng 443. HTTPS mã hóa dữ liệu bằng SSL/TLS, bảo vệ thông tin nhạy cảm như mật khẩu, thẻ tín dụng." },
+    { question: "HTTPS khác HTTP ở điểm nào?", options: ["Nhanh hơn", "Có mã hóa", "Cổng khác", "Giao diện đẹp hơn"], correct: 1, explanation: "HTTPS = HTTP + SSL/TLS. Điểm khác biệt quan trọng nhất là HTTPS MÃ HÓA dữ liệu, bảo vệ quyền riêng tư người dùng. Trình duyệt hiển thị biểu tượng ổ khóa khi dùng HTTPS." },
+    { question: "MAC Address có bao nhiêu bytes?", options: ["4 bytes", "6 bytes", "8 bytes", "12 bytes"], correct: 1, explanation: "MAC Address (Media Access Control) có 6 bytes = 48 bits. Ví dụ: 00:1A:2B:3C:4D:5E. MAC address là địa chỉ vật lý DUY NHẤT của card mạng, do nhà sản xuất gán." },
+    { question: "ARP chuyển đổi gì?", options: ["IP sang MAC", "MAC sang IP", "Domain sang IP", "IP sang Domain"], correct: 0, explanation: "ARP (Address Resolution Protocol) chuyển đổi địa chỉ IP thành địa chỉ MAC. Khi một thiết bị muốn gửi dữ liệu trong mạng LAN, nó cần biết MAC address của thiết bị đích." },
+    { question: "ICMP dùng cho lệnh nào?", options: ["telnet", "ftp", "ping", "ssh"], correct: 2, explanation: "ICMP (Internet Control Message Protocol) được dùng trong lệnh PING để kiểm tra kết nối mạng và đo thời gian phản hồi. Ví dụ: ping google.com" },
+    { question: "Địa chỉ localhost là gì?", options: ["192.168.1.1", "127.0.0.1", "10.0.0.1", "8.8.8.8"], correct: 1, explanation: "127.0.0.1 là địa chỉ LOCALHOST (loopback), trỏ về chính máy tính đang sử dụng. Dùng để test ứng dụng mạng trên local." },
+    { question: "Ethernet là công nghệ mạng gì?", options: ["WAN", "LAN", "MAN", "PAN"], correct: 1, explanation: "Ethernet là công nghệ mạng LAN phổ biến nhất, sử dụng cáp mạng (RJ45) để kết nối. Tốc độ: 10 Mbps, 100 Mbps, 1 Gbps, 10 Gbps." },
+    { question: "WiFi là loại mạng gì?", options: ["LAN có dây", "WLAN", "WAN", "Internet"], correct: 1, explanation: "WiFi là công nghệ WLAN (Wireless LAN) - mạng LAN không dây. Thiết bị kết nối qua sóng radio thay vì cáp." },
+    { question: "Router hoạt động ở tầng nào?", options: ["Vật lý", "Liên kết", "Mạng", "Giao vận"], correct: 2, explanation: "Router hoạt động ở tầng Mạng (Network Layer - Layer 3) trong mô hình OSI. Router sử dụng địa chỉ IP để định tuyến." },
+    { question: "Switch hoạt động ở tầng nào?", options: ["Vật lý", "Liên kết", "Mạng", "Giao vận"], correct: 1, explanation: "Switch hoạt động ở tầng Liên kết dữ liệu (Data Link Layer - Layer 2). Switch sử dụng địa chỉ MAC để chuyển mạch." },
+    { question: "Hub hoạt động ở tầng nào?", options: ["Vật lý", "Liên kết", "Mạng", "Giao vận"], correct: 0, explanation: "Hub hoạt động ở tầng Vật lý (Physical Layer - Layer 1). Hub chỉ khuếch đại tín hiệu, không có trí thông minh xử lý." },
+    { question: "SSL/TLS dùng để làm gì?", options: ["Tăng tốc", "Mã hóa", "Định tuyến", "Nén dữ liệu"], correct: 1, explanation: "SSL/TLS (Secure Sockets Layer/Transport Layer Security) là giao thức MÃ HÓA dữ liệu, bảo mật kết nối giữa client và server. Dùng trong HTTPS." },
+    { question: "Giao thức nào an toàn hơn?", options: ["HTTP", "HTTPS", "FTP", "Telnet"], correct: 1, explanation: "HTTPS là giao thức an toàn nhất trong các lựa chọn vì có mã hóa SSL/TLS. HTTP, FTP, Telnet đều truyền dữ liệu dạng văn bản thuần (plaintext), dễ bị đánh cắp." },
+    { question: "Access Point phát sóng gì?", options: ["Bluetooth", "WiFi", "Radio", "TV"], correct: 1, explanation: "Access Point (AP) là thiết bị phát sóng WiFi, cho phép các thiết bị không dây (laptop, điện thoại, tablet) kết nối vào mạng LAN." },
+    { question: "Modem chuyển đổi tín hiệu gì?", options: ["Số sang tương tự", "Cao sang thấp", "AC sang DC", "Analog sang Digital"], correct: 0, explanation: "Modem (Modulator-Demodulator) chuyển đổi tín hiệu SỐ (digital) từ máy tính thành tín hiệu TƯƠNG TỰ (analog) để truyền qua đường điện thoại/cáp, và ngược lại." },
+    { question: "Ví dụ nào là địa chỉ IPv4?", options: ["2001:db8::1", "192.168.1.1", "FF:FF:FF:FF:FF:FF", "google.com"], correct: 1, explanation: "192.168.1.1 là địa chỉ IPv4 hợp lệ (4 số từ 0-255 cách nhau bởi dấu chấm). 2001:db8::1 là IPv6. FF:FF:FF:FF:FF:FF là MAC address. google.com là domain name." },
+    { question: "Ví dụ nào là địa chỉ IPv6?", options: ["192.168.1.1", "2001:0db8::1", "127.0.0.1", "8.8.8.8"], correct: 1, explanation: "2001:0db8::1 là địa chỉ IPv6 hợp lệ (dùng hệ thập lục phân, cách nhau bởi dấu hai chấm). :: là cách viết tắt cho các nhóm số 0 liên tiếp." },
+    { question: "TCP đảm bảo điều gì?", options: ["Tốc độ nhanh", "Truyền đáng tin cậy", "Mã hóa", "Nén dữ liệu"], correct: 1, explanation: "TCP đảm bảo truyền dữ liệu ĐÁNG TIN CẬY: kiểm tra lỗi, truyền lại gói bị mất, đảm bảo thứ tự đúng. UDP nhanh hơn nhưng không đáng tin cậy." },
+    { question: "IP làm nhiệm vụ gì?", options: ["Mã hóa", "Định địa chỉ", "Gửi email", "Hiển thị web"], correct: 1, explanation: "IP (Internet Protocol) có nhiệm vụ ĐỊNH ĐỊA CHỈ cho các thiết bị và ĐỊNH TUYẾN dữ liệu qua các mạng. Mỗi thiết bị kết nối Internet cần có địa chỉ IP." },
+    { question: "Băng thông là gì?", options: ["Độ rộng cáp", "Lượng dữ liệu truyền được", "Tốc độ CPU", "Dung lượng RAM"], correct: 1, explanation: "Băng thông (Bandwidth) là lượng dữ liệu tối đa có thể truyền qua mạng trong một khoảng thời gian. Đơn vị: bps, Mbps, Gbps." },
+    { question: "Private IP dùng ở đâu?", options: ["Internet", "Mạng nội bộ", "Server công khai", "Website"], correct: 1, explanation: "Private IP (VD: 192.168.x.x, 10.x.x.x, 172.16-31.x.x) chỉ dùng trong MẠNG NỘI BỘ (LAN), không định tuyến trên Internet. Tiết kiệm địa chỉ IP công khai." },
+    { question: "Public IP dùng ở đâu?", options: ["Mạng nội bộ", "Internet", "Localhost", "LAN"], correct: 1, explanation: "Public IP là địa chỉ IP công khai, duy nhất trên INTERNET, được ISP cấp phát. Dùng để các thiết bị kết nối Internet và truy cập từ bên ngoài." },
+    { question: "DNS Server lưu trữ gì?", options: ["Email", "Tên miền và IP", "Mật khẩu", "File"], correct: 1, explanation: "DNS Server lưu trữ bảng ánh xạ giữa TÊN MIỀN (domain name) và ĐỊA CHỈ IP. Khi bạn gõ google.com, DNS server sẽ trả về địa chỉ IP tương ứng." },
+    { question: "SMTP Server làm gì?", options: ["Nhận email", "Gửi email", "Lưu email", "Xóa email"], correct: 1, explanation: "SMTP Server là máy chủ xử lý việc GỬI email. Khi bạn nhấn Send trong email client, dữ liệu được gửi đến SMTP server để chuyển tiếp đến người nhận." },
+    { question: "Giao thức nào không mã hóa?", options: ["HTTPS", "SSH", "HTTP", "SSL"], correct: 2, explanation: "HTTP là giao thức KHÔNG MÃ HÓA, dữ liệu truyền dạng plaintext. HTTPS, SSH, SSL đều có mã hóa. Không nên dùng HTTP cho thông tin nhạy cảm." },
+    { question: "Tốc độ Ethernet phổ biến là?", options: ["1 Mbps", "10 Mbps", "100 Mbps", "Tất cả đều đúng"], correct: 3, explanation: "Ethernet có nhiều chuẩn tốc độ: 10 Mbps (Ethernet), 100 Mbps (Fast Ethernet), 1 Gbps (Gigabit Ethernet), 10 Gbps (10-Gigabit Ethernet). Tất cả đều phổ biến tùy theo mục đích sử dụng." },
+    { question: "Lệnh ping sử dụng giao thức gì?", options: ["TCP", "UDP", "ICMP", "HTTP"], correct: 2, explanation: "Lệnh ping sử dụng giao thức ICMP (Internet Control Message Protocol) để gửi gói Echo Request và nhận Echo Reply, kiểm tra kết nối mạng." },
+    { question: "MAC Address được gán ở đâu?", options: ["Software", "Hardware", "Router", "ISP"], correct: 1, explanation: "MAC Address được gán vào HARDWARE (card mạng) bởi nhà sản xuất khi sản xuất. Mỗi card mạng có MAC address duy nhất, gọi là BIA (Burned-In Address)." },
+    { question: "IP Address được gán bởi?", options: ["Nhà sản xuất", "DHCP hoặc thủ công", "DNS", "HTTP"], correct: 1, explanation: "IP Address có thể được gán TỰ ĐỘNG bởi DHCP server hoặc cấu hình THỦ CÔNG (static IP) bởi người quản trị mạng." },
+    { question: "Mạng nào có phạm vi lớn nhất?", options: ["LAN", "WLAN", "MAN", "WAN"], correct: 3, explanation: "WAN (Wide Area Network) có phạm vi LỚN NHẤT, kết nối các mạng qua khoảng cách địa lý lớn (thành phố, quốc gia, lục địa). Internet là WAN lớn nhất." },
+    { question: "Thiết bị nào cần cho WiFi?", options: ["Hub", "Switch", "Access Point", "Modem"], correct: 2, explanation: "Access Point (AP) là thiết bị bắt buộc để phát sóng WiFi. AP chuyển đổi tín hiệu từ mạng có dây (Ethernet) thành sóng radio không dây." },
+    { question: "Gateway là gì?", options: ["Cổng kết nối mạng", "Loại cáp", "Phần mềm", "Trình duyệt"], correct: 0, explanation: "Gateway là CỔNG KẾT NỐI giữa hai mạng khác nhau, thường là giữa mạng LAN và Internet. Router thường đóng vai trò là default gateway." },
+    { question: "Firewall làm gì?", options: ["Tăng tốc", "Bảo vệ mạng", "Lưu dữ liệu", "Hiển thị web"], correct: 1, explanation: "Firewall là tường lửa, BẢO VỆ MẠNG bằng cách lọc traffic, chặn truy cập trái phép, phát hiện và ngăn chặn tấn công từ bên ngoài." },
+    { question: "VPN là gì?", options: ["Virtual Private Network", "Very Public Network", "Visual Private Network", "Virtual Public Network"], correct: 0, explanation: "VPN (Virtual Private Network) là mạng riêng ảo, tạo kết nối AN TOÀN và MÃ HÓA qua Internet. VPN bảo vệ quyền riêng tư và cho phép truy cập mạng từ xa." },
+    { question: "FTP dùng để làm gì?", options: ["Gửi email", "Truyền file", "Duyệt web", "Chat"], correct: 1, explanation: "FTP (File Transfer Protocol) là giao thức TRUYỀN FILE giữa client và server. Dùng để upload/download files, quản lý files trên server." },
+    { question: "HTTP là giao thức nào?", options: ["Email", "File transfer", "Web", "Chat"], correct: 2, explanation: "HTTP (HyperText Transfer Protocol) là giao thức WEB, dùng để truyền tải trang web, hình ảnh, video từ web server đến trình duyệt." },
+    { question: "Tracert làm gì?", options: ["Tìm virus", "Theo dõi đường đi gói tin", "Tăng tốc mạng", "Mã hóa"], correct: 1, explanation: "Tracert (Traceroute) THEO DÕI ĐƯỜNG ĐI của gói tin từ nguồn đến đích, hiển thị các router trung gian và thời gian phản hồi của từng hop." }
 ];
 
 // ===================================
@@ -567,7 +567,40 @@ function selectAnswer(selectedIndex) {
     // Show feedback
     const feedback = document.getElementById('feedbackContent');
     feedback.className = 'feedback-content ' + (isCorrect ? 'correct' : 'incorrect');
-    feedback.textContent = isCorrect ? 'Chính xác!' : `Sai rồi! Đáp án đúng là: ${question.options[question.correct]}`;
+
+    if (isCorrect) {
+        feedback.innerHTML = `
+            <div class="feedback-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <strong>Chính xác!</strong>
+            </div>
+            <div class="feedback-explanation">
+                ${question.explanation || ''}
+            </div>
+        `;
+    } else {
+        feedback.innerHTML = `
+            <div class="feedback-header">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="15" y1="9" x2="9" y2="15"/>
+                    <line x1="9" y1="9" x2="15" y2="15"/>
+                </svg>
+                <strong>Sai rồi!</strong>
+            </div>
+            <div class="feedback-correct-answer">
+                <strong>Đáp án đúng:</strong> ${question.options[question.correct]}
+            </div>
+            <div class="feedback-explanation">
+                <strong>Giải thích:</strong><br>
+                ${question.explanation || 'Không có giải thích.'}
+            </div>
+        `;
+    }
+
     document.getElementById('quizFeedback').classList.remove('hidden');
 
     document.getElementById('quizScore').textContent = `Điểm: ${quizScore}`;
